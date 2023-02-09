@@ -1,0 +1,27 @@
+To estimate the first derivative of the given function using centered differences,
+backward differences, and forward differences, you can use the following formulas:
+
+Centered differences:
+
+f'(x) ≈ (f(x + h) - f(x - h)) / (2h)
+
+Backward differences:
+
+f'(x) ≈ (f(x) - f(x - h)) / h
+
+Forward differences:
+
+f'(x) ≈ (f(x + h) - f(x)) / h
+
+To compute the derivative at x = 0.5 using progressively smaller values of h,
+you can use a loop to iterate over the range of h values and compute the derivative at each iteration.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%CODE RESULT%%%%%%%%%%%%%%%%%%%%%%
+
+This code will compute the derivative using each of the three methods for progressively smaller values of h,
+until h becomes smaller than the machine epsilon. The results will be printed to the command window in a table,
+with the step size h and the error for each method.
+
+As the step size is reduced, you will see that the error for each method decreases,
+but eventually round-off errors become dominant and the error starts to increase.
